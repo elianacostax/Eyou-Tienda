@@ -12,7 +12,7 @@ function ProductoItem({id, title, price, image, category}) {
         
         <div className="productos">
         <div className="producto">
-          <Link to={`/producto/${id}`}>
+          <Link to={`/productos/${id}`}>
             <div className="producto__img">
               <img src={image.default} alt={title} />
             </div>
@@ -23,7 +23,7 @@ function ProductoItem({id, title, price, image, category}) {
             <p className="price">$ {price}</p>
             <div className="buttom">
               <button className="btn" onClick={()=>addCarrito(id)}>Añadir al carrito</button>
-              <Link to={`/producto/${id}`} className="btn2">Vista</Link>
+              <Link to={`/productos/${id}`} className="btn2">Vista</Link>
             </div>
           </div>
         </div>

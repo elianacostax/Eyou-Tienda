@@ -5,7 +5,7 @@ import {ProductoItem} from '../../components'
 function ProductosLista() {
   const value = useContext(DataContext);
   const [productos] = value.productos;
-
+  
  
   return (
     <>
