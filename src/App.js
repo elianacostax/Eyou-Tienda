@@ -1,27 +1,20 @@
-import Cards from "./components/cards/Cards";
-import { getAllCharacters } from "./services/Characters";
-import { useState, useEffect } from "react";
-import styles from "./app.module.css";
-
-
+import React from "react";
+import { Header, Paginas, Carrito } from "./components";
+import "boxicons";
+import { BrowserRouter as Router } from "react-router-dom";
+import {DataProvider} from './context/DataProvider'
 
 function App() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    getAllCharacters(setData);
-  }, []);
-
-  // console.log(data);
-
   return (
-    <>
-      <h1 className={styles.title}>Rick and Morty</h1>
-      <form>
-        <input type="text" placeholder="Ingrese el personaje a buscar"></input>
-      </form>
-      <Cards data={data} />
-    </>
+    <DataProvider>
+    <div className="App">
+      <Router>
+        <Header />
+        <Carrito/>
+        <Paginas />
+      </Router>
+    </div>
+    </DataProvider>
   );
 }
 
