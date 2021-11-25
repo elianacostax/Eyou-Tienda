@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { DataContext } from "../../context/DataProvider";
 
 function Carrito() {
+  
   const value = useContext(DataContext);
   const [menu, setMenu] = value.menu;
   const [carrito, setCarrito] = value.carrito;
@@ -67,7 +68,7 @@ function Carrito() {
           {
             carrito.map((p) => (
             <div className="carrito__item" key={p.id}>
-              <img src={p.image.default} alt={p.title} />
+              <img src={p.image} alt={p.title} />
               <div>
                 <h3>{p.title}</h3>
                 <p className="price"> {p.price} </p>

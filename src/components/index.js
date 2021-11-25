@@ -1,7 +1,9 @@
-import Header from "./Header/index";
-import ProductosLista from "./Productos/index";
-import Paginas from "./Paginas/Paginas"
-import ProductoItem from "./Productos/ProductoItem";
-import Carrito from "./Carrito/index"
+import Carrito from './Carrito/Carrito'
+import Home from './Home/Home'
+import Inicio from './inicio/index'
+import ProductosList from './productos/index'
+import ProductosDetalles from './productos/ProductosDetalles'
+import Navbar from './Navbar/Navbar'
 
-export {Header, ProductosLista , Paginas, ProductoItem, Carrito};
+
+export {Carrito, Home, Inicio, ProductosList, ProductosDetalles, Navbar}

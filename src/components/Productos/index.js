@@ -1,35 +1,28 @@
-import React, {useContext} from "react";
-import {DataContext} from '../../context/DataProvider'
-import {ProductoItem} from '../../components'
+import React, {useContext} from 'react'
+import { DataContext } from "../../context/DataProvider";
+import ProductoItem from '../productos/ProductoItem'
 
-function ProductosLista() {
-  const value = useContext(DataContext);
-  const [productos] = value.productos;
-  
- 
-  return (
-    <>
-      <h1 className="title">PRODUCTOS</h1>
-      <div className="productos">
-        
-        {
-          productos.map(p =>(
-            <ProductoItem
-            key={p.id}
-            id={p.id}
-            title={p.title}
-            price={p.price}
-            image={p.image}
-            category={p.category}
-            cantidad={p.cantidad}
-            />
-
-          ))
-        }
-
-      </div>
-    </>
-  );
+ const ProductosList = () => {
+	const value = useContext(DataContext)
+	const [productos] = value.productos;
+    return (
+			<>
+			<h1 className="produ">PRODUCTOS</h1>
+        <div className="productos">
+            {
+							productos.map(producto =>(
+								<ProductoItem 
+									key={producto.id}
+									title={producto.title}
+									image={producto.image}
+									category={producto.category}
+									price={producto.price}
+									id={producto.id}
+								/>
+							))
+						}					
+        </div>
+				</>
+    )
 }
-
-export default ProductosLista;
+export default ProductosList;
